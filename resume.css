@@ -1,0 +1,379 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background: #080808;
+    color: #fff;
+}
+
+.heading{
+    font-size: 80px;
+    margin-bottom: 48px;
+    text-align: center;
+}
+
+span{
+    color: #ff004f;
+}
+
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image: ;
+}
+
+.container{
+    padding: 10px 10%;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo{
+    width: 140px;
+    color: #ff004f;
+    text-decoration: none;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a{
+    color: #ffff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s
+}
+
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+li{
+    text-align: center;
+}
+
+.header-text{
+    margin-top: 20%;
+    font-size: 30px;
+
+}
+
+.header-text h1{
+    font-size: 60px;
+    margin-top: 20px;
+}
+
+.header-text h1 span{
+    color: #ff004f;
+}
+
+/* About me */
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 32px;
+    padding-bottom: 6px;
+    background: #080808;
+}
+
+.about-img{
+    position: relative;
+    width: 25rem;
+    height: 25rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-img img{
+    width: 90%;
+    border-radius: 50%;
+    border: .2rem solid #ff004f;
+}
+
+.about-img .circle-spin{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border-top: .2rem solid #080808;
+    border-bottom: .2rem solid #080808;
+    border-left: .2rem solid #ff004f;
+    border-right: .2rem solid #ff004f;
+
+}
+
+.about-content{
+    text-align: center;
+}
+
+.about-content h3{
+    font-size: 2.6rem;
+}
+
+.about-content p{
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem;
+}
+
+/* My-Journey section */
+.journey{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    min-height: auto;
+    padding-bottom: 5rem;
+    padding-left: 1.5rem;
+}
+
+.journey .journey-row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+}
+
+.journey-row .journey-column{
+    flex: 1 1 calc(50% - 2.5rem);
+}
+
+.journey-column .title{
+    font-size: 2.5rem;
+    margin: 0 0 1.5rem 2rem;
+}
+
+.journey-column .title{
+    font-size: 2.5rem;
+    margin: 0 0 1.5rem 2rem;
+}
+
+.journey-column .journey-box{
+    border-left: .2rem solid #ff004f;
+}
+
+.journey-box .journey-content{
+    position: relative;
+    padding-left: 2rem;
+}
+
+.journey-box .journey-content::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -1.1rem;
+    width: 2rem;
+    height: 2rem;
+    background: #ff004f;
+    border-radius: 50%;
+}
+
+.journey-content .content{
+    position: relative;
+    padding: 1rem;
+    width: 80%;
+    border: .1rem solid  #ff004f;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+
+.journey-content .content::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:0%;
+    height: 100%;
+    background: #552433;
+    z-index:-1;
+    transition: .5s; 
+}
+
+.journey-content .content:hover::before{
+    width: 100%;
+}
+
+
+.journey-content .content .year{
+    font-size: 1.5rem;
+    color: #ff004f;
+    padding-bottom: .5rem;
+}
+
+.journey-content .content .year i{
+    padding-right: .5rem;
+}
+
+.journey-content .content h3{
+    font-size: 1.5rem;
+}
+
+.journey-content .content p{
+    font-size: 1.rem;
+    padding-top: .5rem;
+}
+
+/*----------------contact--------------*/
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact-left{
+    flex-basis: 35%;
+}
+
+.contact-right{
+    flex-basis: 60%;
+}
+
+.contact-left p{
+    margin-top: 30px;
+}
+
+.contact-left p i{
+    color: #ff004f;
+    margin-right: 15px;
+    font-size: 25px;
+}
+
+.social-icons{
+    margin-top: 30px;
+}
+
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+    
+
+.social-icons a:hover{
+    color: #ff004f;
+    transform: translateY(-5px);
+    transition: 0.5s;
+}
+
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #ff004f;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    transition: backgroung 0.5s;
+}
+
+.btn:hover{
+    background-color: #ff004f;
+}
+.btn.btn2{
+    display: inline-block;
+    background: #ff004f;
+}
+
+.contact-right form{
+    width: 100%;
+}
+
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+form .btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+    font-weight: 300;
+    margin-top: 20px;
+}
+ 
+.copyright i{
+    color: #ff004f;
+}
+
+/*--------------------media queries-----------*/
+nav .fa-solid {
+    display: none;
+}
+
+@media only screen and (max-width: 600px){
+    nav .fa-solid{
+        display: block;
+        font-size: 25px;
+    }
+
+    nav ul{
+        background: #ff004f;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+
+    nav ul .fa-solid{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+    }
+}

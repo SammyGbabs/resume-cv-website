@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sammy G Resume</title>
+    <link rel="stylesheet" href="resume.css">
+    <script src="https://kit.fontawesome.com/49e10bc08c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Header section -->
+    <section id="header">
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">Resume</a>
+                <ul id="sidemenu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Skills</a></li>
+                    <li><a href="#">My Journey <p>(Education and Experience)</p></a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Prospective Machine Learning Engineer/Expert</p>
+                <h1>Hi, I'm <span>Samuel</span><br>Babalola From Nigeria</h1>
+            </div>
+        </div>
+    </section>
+   
+    <!-- About-me section -->
+    <section class="about" id="about">
+        <h2 class="heading">About <span>Me</span></h2>
+        <div class="about-img">
+            <img src="" alt="">
+            <span class="circle-spin"></span>
+        </div>
+        <div class="about-content">
+            <h3>PROFESSIONAL SUMMARY</h3>
+            <p>A Highly motivated and skilled professional with a strong interest in Machine 
+               Learning within the field of Artificial Intelligence. Proficient in HTML, CSS, 
+               Regular Expressions (Ruby), and shell scripting, with intermediate skills in Python. 
+               Experienced in graphics design. Adept at applying machine learning algorithms and concepts 
+               to solve complex problems. Strong problem-solving and analytical skills combined with a creative 
+               mindset. Committed to continuous learning and staying updated with the latest advancements in the field. 
+               I am seeking a challenging role where I can leverage my diverse skill set to contribute to innovative 
+               projects in Machine Learning and related fields. Passionate about uniting Africa. Believes in inclusive 
+               education, eradicating discrimination, and empowering youth for a harmonious future. Envisioning a continent 
+               where unity and collaboration foster progress and prosperity</p>
+        </div>
+    </section>
+
+    <!-- My Journey (Education and Experience) section -->
+    <section class="journey" id="Journey">
+        <div class="heading">My <span>Journey</span></div>
+        <div class="journey-row">
+            <div class="journey-column">
+                <h3 class="title">Education</h3>
+                <div class="journey-box">
+                    <div class="journey-content">
+                        <div class="content">
+                            <div class="year"><i class="fa-light fa-calendar-days"></i> September 2022 – November 2025</div>
+                            <h3>Bachelor of Software Engineering</h3>
+                            <p>African Leadership University, Kigali, Rwanda.</p>
+                        </div>
+                    </div>
+    
+                    <div class="journey-content">
+                        <div class="content">
+                            <div class="year"><i class="fa-light fa-calendar-days"></i> September 2014 – July 2020</div>
+                            <h3>West Africa Examination Council (W.A.E.C)</h3>
+                            <p>Glorious Johes College, Ibadan, Nigeria.</p>
+                        </div>
+                    </div>
+    
+                    <div class="journey-content">
+                        <div class="content">
+                            <div class="year"><i class="fa-light fa-calendar-days"></i> September 2007 – July 2014</div>
+                            <h3>Primary School Leaving Certificate.</h3>
+                            <p>Grace and Mercy Primary School, Ibadan, Nigeria.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="journey-column">
+                <h3 class="title">Experience</h3>
+                <div class="journey-box">
+                    <div class="journey-content">
+                        <div class="content">
+                            <div class="year"><i class="fa-light fa-calendar-days"></i>March 2023 – Till Date</div>
+                            <h3>Graphics designer & Content-creator - Nigeria Football Leagues</h3>
+                            <p>Created modern sports news flyers and posters, accompanied by engaging and informative sports updates.</p>
+                        </div>
+                    </div>
+                
+                    <div class="journey-content">
+                        <div class="content">
+                            <div class="year"><i class="fa-light fa-calendar-days"></i>January 2021 –  June 2022</div>
+                            <h3>Class Teacher - Glorious Johes College </h3>
+                            <p>Taught Mathematics and further mathematics, Wrote lesson plans, statutory books, 
+                                and Lesson Diary, Skillfully coordinated a class of more than 20 student.</p>
+                        </div>
+                    </div>
+    
+                    <div class="journey-content">
+                        <div class="content">
+                            <div class="year"><i class="fa-light fa-calendar-days"></i>September 2020 – December 2021</div>
+                            <h3>Data entry operator - Glorious Johes College</h3>
+                            <p>Handling the entry of student data into the school database.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--------------------contact----------------->
+     <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>contact@example.com</p>
+                    <p><i class="fa-solid fa-square-phone"></i>09029031486</p>
+                    <div class="social-icons">
+                        <a href=""><i class="fa-brands fa-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-square-twitter"></i></a>
+                        <a href=""><i class="fa-brands fa-Instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                        <a href=""><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright <i class="fa-regular fa-copyright"></i> Samuel, Made with <i class="fa-solid fa-heart"></i> by Sammy.G</p>
+        </div>
+    </div> -
+
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu(){
+            sidemenu.style.right = "0";
+    }
+
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+    </script>
+</body>
+</html>
