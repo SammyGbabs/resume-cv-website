@@ -25,6 +25,7 @@ span{
     color: #ff004f;
 }
 
+/* ------Styles for the Header or Home Section------ */
 #header{
     width: 100%;
     height: 100vh;
@@ -97,7 +98,43 @@ li{
     color: #ff004f;
 }
 
-/* About me */
+
+nav .fa-solid {
+    display: none;
+}
+
+/*----media queries for Nav bar Icon for screens with a maximum width of 770px----*/
+@media only screen and (max-width: 770px){
+    nav .fa-solid{
+        display: block;
+        font-size: 25px;
+    }
+
+    nav ul{
+        background: #ff004f;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+
+    nav ul .fa-solid{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+    }
+}
+
+/* ----Styles for the About me section---- */
 .about{
     padding: 100px;
     margin: auto;
@@ -156,6 +193,7 @@ li{
     background-color: #552433;
 }
 
+/*This code sets the fade in action when the page is relaoded */
 @keyframes slideIn{
     from{
         opacity: 0;
@@ -177,7 +215,7 @@ li{
     }
 }
 
-/*Media querry for the about*/
+/*-----Media query for the about me section for screens with a maximum width of 768px----*/
 @media screen and (max-width: 768px) {
     .about{
         flex-direction: column;
@@ -206,7 +244,7 @@ li{
     }
 }
 
-/* My-Journey section */
+/* ----Styles for the My-Journey (Education & Experience) section----*/
 .journey{
     background: #010405;
     display: flex;
@@ -299,7 +337,7 @@ li{
     padding-top: .5rem;
 }
 
-/*Media querry for skills*/
+/*----Media query for My Journey (Education & Experience) section for screens with a maximum width of 767px----*/
 @media (max-width: 767px) {
     .journey {
       padding: 3rem 0.5rem;
@@ -330,7 +368,7 @@ li{
         }
       
     .journey-content .content {
-          font-size: 0.rem; /* Adjust the font size as needed */
+          font-size: 0.8rem; /* Adjust the font size as needed */
         }
     
     .journey-content .content .year{
@@ -358,7 +396,7 @@ li{
     } 
   } 
 
-/* Style for the skills section */
+/*----Style for the skills section----*/
 #skills h2{
     font-size: 80px;
     margin-bottom: 20px;
@@ -404,7 +442,7 @@ li{
 
 }
 
-/*This code sets the fade in action when the page is relaoded at Aims section*/
+/*This code sets the fade in action when the page is relaoded */
 @keyframes slideIn{
     from{
         opacity: 0;
@@ -426,7 +464,7 @@ li{
     }
 }
 
-/*Media querry for skills*/
+/*----Media query for skills section for screens with a maximum width of 770px----*/
 @media screen and (max-width: 770px) {
 #skills h2{
     font-size: 40px;
@@ -461,7 +499,7 @@ li{
 }
 }
 
-/* Styles for My project Section */
+/*-----Styles for My project Section----*/
 .project{
     margin-top: 20px;
 }
@@ -512,7 +550,7 @@ li{
 }
 
 
-/* Media query for screens with a maximum width of 770px */
+/* Media query for the My project section for screens with a maximum width of 770px */
 @media screen and (max-width: 770px) {
     .project h2{
         font-size: 40px;
@@ -530,7 +568,7 @@ li{
     }
 }
 
-/*----------------contact--------------*/
+/*----Styles for the contact Section----*/
 .row{
     display: flex;
     justify-content: space-between;
@@ -629,39 +667,4 @@ form .btn2{
  
 .copyright i{
     color: #ff004f;
-}
-
-/*--------------------media queries-----------*/
-nav .fa-solid {
-    display: none;
-}
-
-@media only screen and (max-width: 770px){
-    nav .fa-solid{
-        display: block;
-        font-size: 25px;
-    }
-
-    nav ul{
-        background: #ff004f;
-        position: fixed;
-        top: 0;
-        right: -200px;
-        width: 200px;
-        height: 100vh;
-        padding-top: 50px;
-        z-index: 2;
-        transition: right 0.5s;
-    }
-
-    nav ul li{
-        display: block;
-        margin: 25px;
-    }
-
-    nav ul .fa-solid{
-        position: absolute;
-        top: 25px;
-        left: 25px;
-    }
 }
