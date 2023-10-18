@@ -10,7 +10,7 @@ html{
 }
 
 body{
-    background: #080808;
+    background: #080808; 
     color: #fff;
 }
 
@@ -135,9 +135,8 @@ nav .fa-solid {
 }
 
 /* ----Styles for the About me section---- */
-.about{
-    padding: 100px;
-    margin: auto;
+#about{
+    background: #0e0d0d;
 }
 .about-container{
     display: flex;
@@ -153,8 +152,7 @@ nav .fa-solid {
     animation: slideIn 1s forwards;
 }
 .about-img img{
-     width: 300px; 
-     max-width: 100%; 
+    width: 300px; 
     height: 400px;
     border-radius: 10px;
 }
@@ -226,7 +224,7 @@ nav .fa-solid {
         padding: 0px;
     }
     .about-img img{
-        width: 50%;
+        width: 45%;
         margin-bottom: 100px;
     }
     .about-content .button{
@@ -246,7 +244,6 @@ nav .fa-solid {
 
 /* ----Styles for the My-Journey (Education & Experience) section----*/
 .journey{
-    background: #010405;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -303,13 +300,14 @@ nav .fa-solid {
 
 .journey-content .content::before{
     content: '';
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 0;
     height: 100%;
     background: #552433;
     z-index: -1;
+    transition: .5s;
 }
 
 .journey-content .content:hover::before{
@@ -395,6 +393,10 @@ nav .fa-solid {
   }  
 
 /*----Style for the skills section----*/
+#skills{
+    background: #0e0d0d;
+}
+
 #skills h2{
     font-size: 80px;
     margin-bottom: 20px;
@@ -437,7 +439,6 @@ nav .fa-solid {
     font-size: 18px;
     line-height: 1.6;
     text-align: justify;
-
 }
 
 /*This code sets the fade in action when the page is relaoded */
@@ -499,7 +500,7 @@ nav .fa-solid {
 
 /*-----Styles for My project Section----*/
 .project{
-    margin-top: 20px;
+    background: #0e0d0d;
 }
 
 .project h2{
