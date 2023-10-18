@@ -103,7 +103,7 @@ nav .fa-solid {
     display: none;
 }
 
-/*----media queries for Nav bar Icon for screens with a maximum width of 770px----*/
+/*----media queries for Nav bar for screens with a maximum width of 770px----*/
 @media only screen and (max-width: 770px){
     nav .fa-solid{
         display: block;
@@ -303,20 +303,18 @@ nav .fa-solid {
 
 .journey-content .content::before{
     content: '';
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    width:0%;
+    width: 0;
     height: 100%;
     background: #552433;
-    z-index:-1;
-    transition: .5s; 
+    z-index: -1;
 }
 
 .journey-content .content:hover::before{
     width: 100%;
 }
-
 
 .journey-content .content .year{
     font-size: 1.5rem;
@@ -364,12 +362,12 @@ nav .fa-solid {
     }
 
     .journey .title {
-          font-size: 1.8rem; /* Adjust the font size as needed */
-        }
+          font-size: 1.8rem;  
+    }
       
     .journey-content .content {
-          font-size: 0.8rem; /* Adjust the font size as needed */
-        }
+          font-size: 0.8rem; 
+    }
     
     .journey-content .content .year{
         font-size: medium;
@@ -394,7 +392,7 @@ nav .fa-solid {
         border-left: .2rem solid #ff004f;
         margin-left: 1.5rem;
     } 
-  } 
+  }  
 
 /*----Style for the skills section----*/
 #skills h2{
