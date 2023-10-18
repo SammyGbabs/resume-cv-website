@@ -5,13 +5,18 @@
     box-sizing: border-box;
 }
 
+html{
+   scroll-behavior: smooth; 
+}
+
 body{
     background: #080808;
     color: #fff;
 }
 
 .heading{
-    font-size: 80px;
+    font-size: 70px;
+    font-weight: bolder;
     margin-bottom: 48px;
     text-align: center;
 }
@@ -23,7 +28,9 @@ span{
 #header{
     width: 100%;
     height: 100vh;
-    background-image: ;
+    background-image: url(images/pics.png);
+    background-size: cover;
+    background-position: center;
 }
 
 .container{
@@ -92,61 +99,116 @@ li{
 
 /* About me */
 .about{
+    padding: 100px;
+    margin: auto;
+}
+.about-container{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    gap: 32px;
-    padding-bottom: 6px;
-    background: #080808;
 }
-
 .about-img{
-    position: relative;
-    width: 25rem;
-    height: 25rem;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.about-img img{
-    width: 90%;
-    border-radius: 50%;
-    border: .2rem solid #ff004f;
-}
-
-.about-img .circle-spin{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(0);
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    border-top: .2rem solid #080808;
-    border-bottom: .2rem solid #080808;
-    border-left: .2rem solid #ff004f;
-    border-right: .2rem solid #ff004f;
-
-}
-
-.about-content{
+    flex: 1;
     text-align: center;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: slideIn 1s forwards;
 }
-
-.about-content h3{
-    font-size: 2.6rem;
+.about-img img{
+     width: 300px; 
+     max-width: 100%; 
+    height: 400px;
+    border-radius: 10px;
 }
-
+.about-content{
+    flex: 1;
+    margin: 60px;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeIn 1s forwards;
+    animation-delay: 0.5s;
+    margin-bottom: 100px;
+}
+.about-content h2{
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 20px;
+}
 .about-content p{
-    font-size: 1.6rem;
-    margin: 2rem 0 3rem;
+    color: #fff;
+    font-size: 20px;
+    line-height: 2rem; 
+    text-align: justify;
+}
+.about-content .button{
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 17px;
+    background-color: #ff004f;
+    color: #fff;
+    text-decoration: none;
+    margin-top: 15px;
+    transition: 0.5s ease;
+    border-radius: 7px;
+}
+.about-content .button:hover{
+    background-color: #552433;
+}
+
+@keyframes slideIn{
+    from{
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*Media querry for the about*/
+@media screen and (max-width: 768px) {
+    .about{
+        flex-direction: column;
+    }
+    .about-img, .about-content{
+        flex: 100%;
+        text-align: center;
+        padding: 0px;
+    }
+    .about-img img{
+        width: 50%;
+        margin-bottom: 100px;
+    }
+    .about-content .button{
+        margin-bottom: 15px;
+    }
+    .about-content{
+        margin: 15px 20px;
+    }
+    .about-content h2{
+        font-size: 1.2rem;
+    }
+    .about-content p{
+        line-height: 1.5;
+        font-size: 14px;
+    }
 }
 
 /* My-Journey section */
 .journey{
+    background: #010405;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -164,11 +226,6 @@ li{
 
 .journey-row .journey-column{
     flex: 1 1 calc(50% - 2.5rem);
-}
-
-.journey-column .title{
-    font-size: 2.5rem;
-    margin: 0 0 1.5rem 2rem;
 }
 
 .journey-column .title{
@@ -240,6 +297,237 @@ li{
 .journey-content .content p{
     font-size: 1.rem;
     padding-top: .5rem;
+}
+
+/*Media querry for skills*/
+@media (max-width: 767px) {
+    .journey {
+      padding: 3rem 0.5rem;
+    }
+    
+    #journey .heading{
+        font-size: 40px;
+        font-weight: bolder;
+        margin-bottom: 15px;
+        margin-left:200px;
+    }
+
+    .journey .journey-row {
+      flex-direction: column;
+      gap: 2rem;
+    }
+  
+    .journey .journey-row .journey-column {
+      flex: 1 1 100%;
+    }
+  
+    .journey .journey-box .journey-content .content {
+      width: 100%;
+    }
+
+    .journey .title {
+          font-size: 1.8rem; /* Adjust the font size as needed */
+        }
+      
+    .journey-content .content {
+          font-size: 0.rem; /* Adjust the font size as needed */
+        }
+    
+    .journey-content .content .year{
+        font-size: medium;
+    }
+        
+    .journey-content .content h3{
+        font-size: 1.2rem;
+    }
+
+    .journey-box .journey-content::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -1.0rem;
+        width: 2rem;
+        height: 2rem;
+        background: #ff004f;
+        border-radius: 50%;
+    }
+
+    .journey-column .journey-box{
+        border-left: .2rem solid #ff004f;
+        margin-left: 1.5rem;
+    } 
+  } 
+
+/* Style for the skills section */
+#skills h2{
+    font-size: 80px;
+    margin-bottom: 20px;
+    text-align: center;
+    margin-right: 300px;
+}
+.container-skills {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    margin-left: 40px;
+}
+
+.container-skills h3{
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.content-right{
+    flex: 1;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeIn 1s forwards;
+    animation-delay: 0.5s;
+    margin-bottom: 40px;
+}
+
+.content-left{
+    flex: 1;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeIn 1s forwards;
+    animation-delay: 0.5s;
+    margin-bottom: 40px;
+}
+
+.content-left ul li, .content-right ul li {
+    margin-bottom: 10px;
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: justify;
+
+}
+
+/*This code sets the fade in action when the page is relaoded at Aims section*/
+@keyframes slideIn{
+    from{
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*Media querry for skills*/
+@media screen and (max-width: 770px) {
+#skills h2{
+    font-size: 40px;
+    margin-bottom: 15px;
+    margin-left:200px;
+}
+.container-skills {
+    display: flex;
+    flex-wrap: row;
+    justify-content: center;
+    align-items: stretch;
+    margin-left: 5px;
+}
+
+.container-skills h3{
+    font-size: 20px;
+    margin-bottom: 15px;
+    margin-top: 0;
+    margin-left: 30px;
+    text-align: left;
+}
+.content-left ul li, .content-right ul li {
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 1.2;
+    text-align: left;
+    margin-left: 30px;
+    padding-right: 20px;
+}
+.content-right ul li {
+    margin-left: 5px;
+}
+}
+
+/* Styles for My project Section */
+.project{
+    margin-top: 20px;
+}
+
+.project h2{
+    font-size: 60px;
+    margin-bottom: 20px;
+    text-align: center;
+    margin-right: 50px;
+}
+
+.container-project{
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.project .box{
+    float: left;
+    text-align: center;
+    width: 30%;
+    padding: 10px;
+}
+
+.box a{
+    margin-bottom: 20px;
+    margin-top: 40px;
+    color: #010405;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    font-family: 'Arial', sans-serif;
+    background-color: #ff004f;
+    padding: 10px 20px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
+.box a:hover {
+    color: #ff004f;
+    background-color: #fff;
+}
+
+.box p{
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+
+/* Media query for screens with a maximum width of 770px */
+@media screen and (max-width: 770px) {
+    .project h2{
+        font-size: 40px;
+        margin-bottom: 15px;
+        margin-left:100px;
+    }
+    
+    .container-project {
+        width: 100%;
+    }
+
+    .project .box {
+        width: 100%; 
+        float: none; 
+    }
 }
 
 /*----------------contact--------------*/
@@ -348,7 +636,7 @@ nav .fa-solid {
     display: none;
 }
 
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 770px){
     nav .fa-solid{
         display: block;
         font-size: 25px;
